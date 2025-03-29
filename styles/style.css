@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
   font-weight: var(--normal-font-weight);
@@ -8,7 +6,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
 .header {
