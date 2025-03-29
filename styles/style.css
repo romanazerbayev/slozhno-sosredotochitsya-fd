@@ -79,11 +79,11 @@
 
 .header__pseudo {
   position: absolute;
-  inset-block-start: var(--main-padding);
-  inset-inline-end: calc(10px + var(--main-padding));
   color: var(--accent-color);
   font-size: var(--main-font-size);
   line-height: 25px;
+  inset-block-start: var(--main-padding);
+  inset-inline-end: calc(10px + var(--main-padding));
 }
 
 .header__pseudo::before {
@@ -158,8 +158,9 @@
 }
 
 .content__list-subtitle {
-  font-size: var(--main-font-size);
+  margin-block-end: var(--subtitle-margin);
   font-weight: var(--normal-font-weight);
+  font-size: var(--main-font-size);
   line-height: var(--main-line-height);
 }
 
@@ -208,9 +209,9 @@
 }
 
 .gallery__image {
-  block-size: 100%;
   object-fit: cover;
   object-position: center;
+  block-size: 100%;
   inline-size: 100%;
 }
 
