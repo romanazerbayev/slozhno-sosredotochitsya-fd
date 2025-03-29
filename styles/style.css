@@ -1,5 +1,292 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  font-weight: var(--normal-font-weight);
+  font-size: var(--main-font-size);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  position: relative;
+  justify-items: end;
+  display: grid;
+  grid-template-rows: 0 1fr min-content 1fr 0;  
+  margin-block-end: var(--header-margin);
+  padding: var(--main-padding);
+  min-block-size: 100vb;
+}
+
+.frames::before {
+  content: "";
+  justify-self: end;
+  border-inline-end: 1px solid var(--frames-color);
+  border-block-start: 1px solid var(--frames-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.frames::after {
+  content: "";
+  align-self: end;
+  justify-self: start;
+  border-inline-start: 1px solid var(--frames-color);
+  border-block-end: 1px solid var(--frames-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header__theme-menu {
+  align-content: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  padding: 0 13px;
+  align-self: center;
+  border: 1px solid transparent;
+  color: var(--nav-button-color);
+  font-size: var(--main-font-size);
+  text-transform: lowercase;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--nav-button-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--nav-button-hover);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--nav-button-color);
+  pointer-events: none;
+}
+
+.header__pseudo {
+  position: absolute;
+  top: var(--main-padding);
+  right: calc(10px + var(--main-padding));
+  color: var(--accent-color);
+  line-height: 25px;
+  font-size: var(--main-font-size);
+}
+
+.header__pseudo::before {
+  content: "REC";
+}
+
+.header__pseudo::after {
+  content: "";
+  margin-inline-start: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 6px 3px var(--accent-color);
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.header__title {
+  align-self: center;
+  justify-self: start;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  -webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
+}
+
+.main-meaning {
+  color: var(--header-title-color);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--meaning-font-size);
+  line-height: 82.5%;
+  text-transform: lowercase;
+}
+
+.title-decor {
+  color: var(--accent-text-color);
+  background-color: var(--accent-color);
+  font-weight: var(--bold-font-weight);
+}
+
+.header__text {
+  align-self: center;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+}
+
+.decorated-text {
+  color: var(--accent-color);
+}
+
+.content {
+  padding: 0 var(--main-padding);
+}
+
+.content__section {
+  margin-block-end: var(--section-margin);
+}
+
+.content__subsection {
+  margin-block-end: 20px;
+  color: var(--main-text-color);
+}
+
+.content__title {
+  margin-block-end: var(--content-title-margin);
+  font-size: var(--main-font-size);
+  color: var(--title-color);
+}
+
+.content__subtitle {
+  margin-block-end: var(--content-subtitle-margin);
+}
+
+.content__link {
+  text-shadow: 2px 0px var(--accent-color);
+  text-decoration: none;
+}
+
+.content__link:hover {
+  text-decoration: underline;
+}
+.content__link:focus {
+  outline: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+
+.content__list-title {
+  color: var(--accent-text-color);
+}
+
+.content__list-subtitle {
+  margin-block-end: var(--content-subtitle-margin);
+  font-weight: var(--normal-font-weight);
+}
+
+.gallery {
+  margin-block-end: var(--gallery-margin);
+}
+
+.gallery__title {
+  margin-block-end: var(--gallery-title-margin);
+  color: var(--accent-text-color);
+}
+
+.gallery__list-item {
+  display: flex;
+  margin-block-end: var(--gallery-item-margin);
+  overflow: hidden;
+}
+
+.gallery__list-image {
+  max-width: 100%;
+}
+
+.footer {
+  display: grid;
+  align-content: space-between;
+  min-block-size: 100vb;
+  min-inline-size: 100%;
+  text-shadow: 2px 0px var(--accent-color);
+  padding: var(--main-padding);
+}
+
+.footer__span {
+  justify-self: center;
+}
+
+@media (width >= 768px) {
+  .header__title {
+    margin-inline-start: calc(-1 * var(--main-padding));
+  }
+
+  .header__text {
+    margin-inline-start: 50%;
+  }
+
+  .header__pseudo {
+    inset-block-start: var(--main-padding);
+    inset-inline-end: 28px;
+  }
+
+  .odd {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--content-title-margin);
+  }
+
+  .gallery__title {
+    margin-block-end: var(--content-title-margin);
+  }
+
+  .gallery__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--gallery-gap);
+  }
+
+  .gallery__list-image {
+    block-size: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .gallery__list-item:first-of-type {
+    grid-column: span 2;
+  }
+  .gallery__list-item:nth-of-type(2) {
+    grid-row: span 2;
+  }
+
+  .gallery__list-item:nth-of-type(3) {
+    grid-row: span 3;
+  }
+
+  .gallery__list-item:last-of-type {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .even {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 1fr;
+    gap: var(--article-margin);
+    margin: 0;
+  }
+
+  .even .content__subsection {
+    grid-row: 2;
+  }
 }
