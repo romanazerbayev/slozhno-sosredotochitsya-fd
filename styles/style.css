@@ -165,11 +165,13 @@ line-height: var(--main-line-height);
 .content__title {
   color: var(--title-color);
   font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
 }
 
 .content__subtitle {
   margin-block-end: var(--subtitle-margin);
   font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
 }
 
 .content__text {
@@ -180,7 +182,7 @@ line-height: var(--main-line-height);
   margin: 0;
 }
 
-.сщтtitle {
+.!!!title {
   margin-block-end: var(--subtitle-margin);
   font-weight: var(--normal-font-weight);
 }
