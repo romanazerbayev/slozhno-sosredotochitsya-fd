@@ -29,6 +29,7 @@
 @media (width >= 768px) {
   :root {
     --main-padding: 20px;
+    --main-gap: 80px;
     --header-footer-margin: 60px;
     --gallery-gap: 20px;
   }
