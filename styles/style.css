@@ -2,6 +2,7 @@
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
   font-weight: var(--normal-font-weight);
   font-size: var(--main-font-size);
+  background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -157,9 +158,9 @@
 }
 
 .content__list-subtitle {
-font-size: var(--main-font-size);
-font-weight: var(--normal-font-weight);
-line-height: var(--main-line-height);
+  font-size: var(--main-font-size);
+  font-weight: var(--normal-font-weight);
+  line-height: var(--main-line-height);
 }
 
 .content__title {
@@ -180,12 +181,6 @@ line-height: var(--main-line-height);
 
 .content__list .content__subtitle {
   margin: 0;
-}
-
-.content__list-subtitle {
-  margin-block-end: var(--subtitle-margin);
-  font-weight: var(--normal-font-weight);
-  line-height: var(--main-line-height);
 }
 
 .content__link {
