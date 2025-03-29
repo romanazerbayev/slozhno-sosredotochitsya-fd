@@ -259,7 +259,12 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  .even .content__subsection {
+  .even .content__section {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .even .content__list {
+    grid-row: 2;
     grid-column: span 3;
   }
 
