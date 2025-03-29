@@ -10,23 +10,36 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #FF8DCB;
-  --nav-button-color: #353430;
   --frames-color: #353430;
   --title-color: #353430;
-  --nav-button-hover: #FFF1F766;
+  --nav-button-hover: #32312d66;
+  --nav-button-color: #353430;
   --accent-text-color: #353430;
   --header-title-color: #FFC2E6;
   --main-text-color: #353430;
   --bg-image: url(../images/cover-image-light.png);
 }
 
+.theme-light .header__title {
+  -webkit-text-stroke: initial;
+  text-stroke: initial;
+}
+
+.theme-light .header__theme-menu {
+  color: #353430;
+}
+
+.theme-light .header__pseudo {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #FF8DCB;
-    --nav-button-color: #353430;
     --frames-color: #353430;
     --title-color: #353430;
-    --nav-button-hover: #FFF1F766;
+    --nav-button-hover: #32312d66;
+    --nav-button-color: #353430;
     --accent-text-color: #353430;
     --header-title-color: #FFC2E6;
     --main-text-color: #353430;
@@ -38,16 +51,16 @@
 
   }
 
-  .header__title {
-  `-webkit-text-stroke: initial;
-  `text-stroke: initial;
+  .theme-auto .header__title {
+    -webkit-text-stroke: initial;
+    text-stroke: initial;
   }
 
-  .header__theme-menu {
-  `color: #353430;
+  .theme-auto .header__theme-menu {
+    color: #353430;
   }
 
-  .header__pseudo {
+  .theme-auto .header__pseudo {
     display: none;
   }
 }

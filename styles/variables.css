@@ -5,6 +5,10 @@
 
 :root {
   --main-font: 'IBM Plex mono';
+  --main-font-size: 18px;
+  --main-line-height: 23.4px;
+  --normal-font-weight: 400;
+  --bold-font-weight: 700;
   --meaning-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --accent-color: #FF0070;
   --frames-color: #FF0070;
@@ -13,29 +17,25 @@
   --nav-button-color: #FF0070;
   --accent-text-color: #000028;
   --header-title-color: #DB00FF;
-  --header-margin: 40px;
   --main-text-color: #F1B2CE;
-  --main-font-size: 18px;
-  --main-line-height: 23.4px;
-  --normal-font-weight: 400;
-  --bold-font-weight: 700;
+  --header-footer-margin: 40px;
+  --main-gap: 50px;
   --bg-image: url(../images/cover-image-dark.png);
   --main-padding: calc(clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem));
-  --section-margin: 50px;
-  --article-margin: 20px;
-  --content-title-margin: 20px;
-  --content-subtitle-margin: 10px;
+  --content-gap: 20px;
+  --subtitle-margin: 10px;
+  --gallery-gap: 10px;
   --content-list-title-margin: 20px;
   --gallery-margin: 40px;
   --gallery-item-margin: 10px;
   --gallery-title-margin: 10px;
-  --gallery-gap: 20px;
 }
 
 @media (width >= 768px) {
   :root {
     --main-padding: calc(clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem));
-    --gallery-margin: 60px;
+    --header-footer-margin: 60px;
+    --gallery-gap: 20px;
   }
 }
 
