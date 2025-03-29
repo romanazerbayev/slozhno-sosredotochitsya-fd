@@ -166,12 +166,17 @@
   font-size: var(--main-font-size);
 }
 
+.content__text {
+  line-height: var(--main-line-height);
+}
+
 .content__list .content__subtitle {
   margin: 0;
 }
 
-.content__list-subtitle {
+.сщтtitle {
   margin-block-end: var(--subtitle-margin);
+  font-weight: var(--normal-font-weight);
 }
 
 .content__link {
@@ -188,10 +193,6 @@
 
 .content__link:focus-visible {
   outline: 1px solid var(--main-text-color);
-}
-
-.content__list-subtitle {
-  font-weight: var(--normal-font-weight);
 }
 
 .gallery {
