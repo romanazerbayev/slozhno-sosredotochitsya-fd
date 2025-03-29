@@ -182,9 +182,10 @@ line-height: var(--main-line-height);
   margin: 0;
 }
 
-.!!!title {
+.content__list-subtitle {
   margin-block-end: var(--subtitle-margin);
   font-weight: var(--normal-font-weight);
+  line-height: var(--main-line-height);
 }
 
 .content__link {
