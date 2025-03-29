@@ -12,7 +12,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 0 1fr min-content 1fr 0;
-  justify-items: end;  
+  justify-items: end;
   margin-block-end: var(--header-footer-margin);
   padding: var(--main-padding);
   min-block-size: 100vb;
@@ -203,6 +203,13 @@
   color: var(--accent-text-color);
 }
 
+.gallery__image {
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+}
+
 .footer {
   display: grid;
   align-content: space-between;
@@ -247,13 +254,6 @@
 
   .gallery__title {
     grid-column: 1 / -1;
-  }
-
-  .gallery__image {
-    object-fit: cover;
-    object-position: center;
-    block-size: 100%;
-    inline-size: 100%;
   }
 
   .gallery__image:first-of-type {
