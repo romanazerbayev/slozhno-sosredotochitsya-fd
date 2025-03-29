@@ -16,7 +16,7 @@
   --header-footer-margin: 40px;
   --main-gap: 50px;
   --bg-image: url(../images/cover-image-dark.png);
-  --main-padding: calc(clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem));
+  --main-padding: 10px;
   --content-gap: 20px;
   --subtitle-margin: 10px;
   --gallery-gap: 10px;
@@ -28,7 +28,7 @@
 
 @media (width >= 768px) {
   :root {
-    --main-padding: calc(clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem));
+    --main-padding: 20px;
     --header-footer-margin: 60px;
     --gallery-gap: 20px;
   }
