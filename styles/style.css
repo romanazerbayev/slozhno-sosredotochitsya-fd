@@ -190,6 +190,10 @@
   margin: 0;
 }
 
+.even .content__subtitle {
+  margin-block-end: var(--subtitle-margin);
+}
+
 .content__link {
   text-decoration: none;
   text-shadow: 2px 0px var(--accent-color);
@@ -318,10 +322,6 @@
     gap: var(--content-gap);
     grid-row: 2;
     grid-column: span 3;
-  }
-
-  .even .content__subtitle {
-    margin-block-end: var(--subtitle-margin);
   }
 
   .content__list {
